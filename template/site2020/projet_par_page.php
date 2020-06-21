@@ -49,13 +49,13 @@ $pagePrecedente = $bdd -> query("SELECT * FROM projet WHERE ordre = $projet_a_af
 
 echo "<div class='pagination'>";
 if (!empty($pagePrecedente)) {
-  echo "<a href='projet.php?projetChoisi=$pagePrecedente[ordre]'><Projet précédent</a>";
+  echo "<a href='projet.php?projetChoisi=$pagePrecedente[ordre]'>  ⇽ Projet précédent</a>";
 }
 
  echo "<a href='" . CV_URL_SITE . "projet_liens.php'>Retour à la liste des projets</a>";
 
 if (!empty($pageSuivante)) {
-  echo "<a href='projet.php?projetChoisi=$pageSuivante[ordre]'>Projet suivant></a>";
+  echo "<a href='projet.php?projetChoisi=$pageSuivante[ordre]'>Projet suivant ⇾ </a>";
 }
 
 echo "</div> ";
