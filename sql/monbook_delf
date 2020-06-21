@@ -1,0 +1,58 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.3
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : localhost:8889
+-- Généré le :  Dim 21 juin 2020 à 21:52
+-- Version du serveur :  5.7.26
+-- Version de PHP :  7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `monbook_delf`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `simpledonnee`
+--
+
+CREATE TABLE `simpledonnee` (
+  `id_simpledonnee` int(11) NOT NULL,
+  `genre` varchar(250) NOT NULL,
+  `contenu` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `simpledonnee`
+--
+
+INSERT INTO `simpledonnee` (`id_simpledonnee`, `genre`, `contenu`) VALUES
+(1, 'TITRE_ACCUEIL', 'Webmaster, my new life!'),
+(2, 'TEXTE_ACCUEIL', 'J\'ai découvert le code par hasard en poussant la porte d\'un atelier et je ne savais pas que ce jour-là allait déterminer la suite de mon parcours professionnel. Je suis retombée en enfance quand j\'inventais des codes avec mes amies. Suite à cet atelier, je me suis lancée dans l\'aventure et j\'ai suivi une formation qui m\'a ouvert plusieurs chemins. Je vous laisse voir les projets fait au cours de cette formation. '),
+(3, 'LINKEDIN', 'https://www.linkedin.com/checkpoint/challengesV2/AQGGIeJ4NaDDRwAAAXLWsPPWsJIpT-LbMBFEqBJeYVvnFJy5mwEibdktKzvEd9MS9w3vPkuwCQMIQEFMn0of5DTpI-ScK1LwWA'),
+(4, 'MAIL', 'delphine.dumont.pro@gmail.com'),
+(5, 'TELEPHONE', '06 82 61 97 27');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `simpledonnee`
+--
+ALTER TABLE `simpledonnee`
+  ADD PRIMARY KEY (`id_simpledonnee`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `simpledonnee`
+--
+ALTER TABLE `simpledonnee`
+  MODIFY `id_simpledonnee` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
