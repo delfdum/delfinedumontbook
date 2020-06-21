@@ -1,0 +1,366 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*___________________________________________________________________________________________________________________________________*/
+.ftsz_1 {
+	font-size: 1em;
+}
+
+
+body {
+  background-color: #1a535c;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+}
+
+ header, main {
+  width: 80%;
+  background-color: #83c5be;
+  margin-left: 10%;
+  border-radius: 10px;
+  margin-top: -3vh;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: inherit;
+  padding: 2vh;
+  margin-top: 2vh;
+}
+
+header ul li {
+	padding:1px;
+	list-style-type: none;
+}
+
+a {
+ text-decoration: none;
+ padding: 2px 1px 0;
+ color: black;
+}
+
+
+ header nav li
+{
+  cursor: 										pointer;
+  list-style: 								none;
+	position: 									relative;
+}
+
+
+
+
+header nav
+{
+  border-top: 								solid 1px black;
+  padding: 										1vh 1vw;
+}
+
+header nav li:before {
+  content: 										"";
+  position: 									absolute;
+  width: 											100%;
+  height: 										1px;
+  bottom: 										0;
+  left: 											0;
+  background-color: 					#1a535c;
+  visibility: 								hidden;
+  transform: 									scaleX(0);
+  transition: 								all .3s ease-in-out;
+}
+
+header nav li:hover:before {
+  visibility: 								visible;
+  transform: 									scaleX(1);
+}
+
+.tousProjets {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+
+h1,  p {
+  text-align:center;
+  width: 80%;
+  height: auto;
+  padding-left: 10%;
+
+  padding-bottom: 8vh;
+}
+
+h1 {
+  font-size: 1.6em;
+	padding-top: 8vh;
+}
+
+h2 {
+  text-align:center;
+  font-size: 1.2em;
+  padding-bottom: 20vh;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+button, label, select, optgroup, img.displayblock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+}
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #068FCC;
+  margin-top: 10vh;
+  padding-top: 3vh;
+  padding-bottom: 10vh;
+}
+
+.delfDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.titre_nom{
+	display:flex;
+	flex-direction: column;
+}
+
+
+
+.contenair_projets {
+  display: flex;
+  flex-direction: column;
+  min-height: 63vh;
+  padding: 1rem;
+}
+  /* PAGE PROJET PAR TECHNOLOGIES */
+
+
+.main, .contenairPrincipal {
+  margin-left: 10vw;
+}
+
+.contenairPrincipal a {
+  color: rgb(10, 10, 10);
+  line-height: 1.6rem;
+  text-decoration: none;
+}
+.contenairPrincipal a:hover {
+  color: rgb(60, 60, 60);
+  font-weight: 500;
+  transition: 550ms;
+}
+
+.contenairPrincipal a:not(:hover) {
+  transition: 550ms;
+}
+
+.contenair_projets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contenair_projets hr {
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.contenair_projets h5 {
+  color: rgb(80, 80, 80);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+  margin-top: 0.1rem;
+}
+
+
+.tousProjets {
+  border: 3px solid #1A535C;
+  border-radius: 0.5rem;
+  margin: 0rem 0.5rem 0.5rem 0rem;
+  max-width: 17vw;
+  padding: 1%;
+}
+
+.tousProjets p {
+  font-size: 1rem;
+}
+.tousProjets a {
+  font-size: 1.3rem;
+}
+.contenair_projetSeul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.chaqueProjet {
+  border: 3px solid gold;
+  border-radius: 0.5rem;
+  margin: 0rem 0.5rem 0.5rem 0rem;
+  max-width: 17vw;
+  padding: 1%;
+}
+
+.chaqueProjet p {
+  font-size: 1rem;
+}
+
+.chaqueProjet a {
+  font-size: 1.3rem;
+}
+  /* IMAGES PAGE PAR PROJET */
+
+	.imageParPage {
+	  align-items: flex-start;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  margin-left: 3rem;
+	}
+
+.imageParProjet {
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0.3rem;
+  margin-bottom: 0.6rem;
+  max-width: 60vw;
+}
+
+.pageProjet{
+	  display: flex;
+	  flex-direction: column;
+	  min-height: 63vh;
+	  padding: 1rem;
+		margin: auto;
+  margin-left: 2rem;
+  width: 80vw;
+	}
+	.pageProjet p {
+  line-height: 1.5rem;
+}
+.pageProjet a {
+  color: rgb(10, 10, 10);
+  line-height: 1.6rem;
+  text-decoration: none;
+}
+.pageProjet a:hover {
+  color: rgb(60, 60, 60);
+  font-weight: 500;
+  transition: 550ms;
+}
+.pageProjet a:not(:hover) {
+  transition: 550ms;
+}
+  /* IMAGES DANS LES MENUS */
+.demoImage {
+  max-width: 17vw;
+  object-fit: contain;
+}
+
+.listeTechno {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+	.tracking-in-expand {
+		-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+		        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-6-21 1:25:29
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
