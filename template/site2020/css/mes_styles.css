@@ -123,15 +123,15 @@ a {
 }
 
  header nav li {
-  cursor: 										pointer;
-  list-style: 								none;
-	position: 									relative;
+  cursor: pointer;
+  list-style: none;
+	position: relative;
 }
 
 
 header nav {
-  border-top: 								solid 1px black;
-  padding: 										1vh 1vw;
+  border-top: solid 1px black;
+  padding: 1vh 1vw;
 }
 
 header nav li:before {
@@ -148,8 +148,8 @@ header nav li:before {
 }
 
 header nav li:hover:before {
-  visibility: 								visible;
-  transform: 									scaleX(1);
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 
@@ -173,7 +173,7 @@ header nav li:hover:before {
   flex-wrap: wrap;
 	min-height: 63vh;
   padding: 1rem;
-	padding-left: 9vw;
+	padding-left: 13vw;
 }
 /* à l'intérieur de mes capsules */
 .tousProjets {
@@ -229,7 +229,7 @@ header nav li:hover:before {
   	width: 80vw;
 	}
 
-	.pageProjet p {
+.pageProjet p {
   line-height: 1.5rem;
 }
 .pageProjet a {
@@ -246,9 +246,15 @@ header nav li:hover:before {
   transition: 550ms;
 }
 
-
-
-
+/* PAGE CONTACT */
+.contenair_contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+	padding-left: 22vw;
+	line-height: 2;
+}
 
 /* FOOTER */
 .contenairFooter {
@@ -266,9 +272,12 @@ header nav li:hover:before {
 }
 
 .logo {
-	width: 2vh;
+	width: 15vh;
 }
 .logo, img {
-    width: 18%;
+    width: 19%;
+}
+.logoContact {
+	width: 5%;
 }
 /* ----------------------------- */
