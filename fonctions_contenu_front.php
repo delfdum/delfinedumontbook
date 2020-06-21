@@ -1,0 +1,22 @@
+<?php
+
+
+function tousLesMenus () {
+    // retourne tous les menus
+    global $bdd;//hyper important et faire attention quand on l'uutlise. dans la fonction, je vais chercher ma base de données
+    return $bdd -> query("select * from menu order by ordre") -> fetchAll(PDO::FETCH_ASSOC);//PDO::FETCH_ASSOC=tu renvoies les clés de monn attribut tu me reournes uniquement le nom sans les numeros.
+}// cette fonction va me retourner un tableau avec tous les menus
+
+function unMenu ($idMenu) {
+    // retourne toutes les informations du menu qui a comme identifiant $idMenu
+
+    global $bdd;
+
+    $query = $bdd -> prepare("select * from menu where id_menu = :idMenu");
+    //tu prepares cette requete mais tu l'execute que qd je te le dirai
+
+    $query -> execute([":idMenu" => $idMenu]);//??????????????????????????????????????????????????????????????????????????????????????????????????????
+
+    return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
+
+}
