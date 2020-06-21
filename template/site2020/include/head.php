@@ -6,8 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="<?php echo URL_TEMPLATE ?>/css/mes_styles.css">
   </head>
@@ -23,6 +22,6 @@
           <?php include "navigation.php" ?>
         </div>
       </div>
+      <div class="border"></div>    
     </header>
     <main>
-    

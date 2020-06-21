@@ -8,9 +8,9 @@ function unProjet ($idProjet) {
 
     $query = $bdd -> prepare("select * from projet where id_projet = :idProjet");
 
-    $query -> execute([":idProjet" => $idProjet]);//
+    $query -> execute([":idProjet" => $idProjet]);
 
-    return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
+    return $query -> fetch(PDO::FETCH_ASSOC);
 }
  $projet_a_afficher = unProjet($_GET["projetChoisi"]);
 
@@ -37,10 +37,5 @@ function unProjet ($idProjet) {
  }
  $techno_a_afficher = lesTechnos($_GET["projetChoisi"]);
 
-// var_dump($techno_a_afficher[0]["nom_techno"]);
-// echo $techno_a_afficher[1]["nom_techno"];
- // echo "<pre>";
- // var_dump($techno_a_afficher);
- // echo "<pre>";
 
  include PATH_TEMPLATE . "projet_par_page.php";

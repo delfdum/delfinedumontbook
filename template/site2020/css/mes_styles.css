@@ -63,12 +63,21 @@ body {
   width: 80%;
   background-color: #83c5be;
   margin-left: 10%;
-  border-radius: 25px;
   margin-top: -3vh;
 	margin-bottom: 2vh;
 }
 
-h1,  p {
+header {
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+footer {
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+h1, p {
   text-align:center;
   width: 80%;
   height: auto;
@@ -77,15 +86,23 @@ h1,  p {
 }
 
 h1 {
-  font-size: 1.6em;
-	padding-top: 8vh;
+	font-size: 1.6em;
+	padding-top: 15vh;
+	margin-bottom: 8vh;
 }
 
 p {
   font-size: 1.4em;
 }
 
-
+.border {
+		border-width:4px;
+		border-style:solid;
+		border-color:#1a535c;
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 3%;
+}
 
 /* TITRE SITE ET SOUS-TITRE__________________ */
 
@@ -98,7 +115,7 @@ p {
 .titre_nom h2 {
 	text-align:center;
 	font-size: 1.2em;
-	margin-top: -6vh;
+	margin-top: -13vh;
 	padding-bottom: 12vh;
 }
 
@@ -200,52 +217,35 @@ header nav li:hover:before {
 
 
 
-/* IMAGES PAGE PAR PROJET */
+/* PAGE PAR PROJET */
 
-.imageParPage {
-	  align-items: flex-start;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  margin-left: 3rem;
-	}
+.imageDeuxParProjet {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
 .imageParProjet {
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid #1a535c;
   border-radius: 0.3rem;
   margin-bottom: 0.6rem;
-  max-width: 60vw;
+  width: 48%
 }
 
-
-/* PAGE PAR PROJET  */
-.pageProjet{
-	  display: flex;
-	  flex-direction: column;
-	  min-height: 63vh;
-	  padding: 1rem;
-		margin: auto;
-  	margin-left: 2rem;
-  	width: 80vw;
-	}
-
-.pageProjet p {
-  line-height: 1.5rem;
-}
-.pageProjet a {
-  color: rgb(10, 10, 10);
-  line-height: 1.6rem;
-  text-decoration: none;
-}
-.pageProjet a:hover {
-  color: rgb(60, 60, 60);
-  font-weight: 500;
-  transition: 550ms;
-}
-.pageProjet a:not(:hover) {
-  transition: 550ms;
+.presentationParProjet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 2;
+	margin-bottom: 24vh;
+	margin-top: 15vh;
 }
 
+.pagination {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 /* PAGE CONTACT */
 .contenair_contact {
   display: flex;
