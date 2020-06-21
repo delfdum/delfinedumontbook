@@ -5,23 +5,25 @@ include PATH_TEMPLATE . "include/head.php";
 <?php //sur cette page, c'est ma page avec tous mes projets et je vais créer des lien sur chaque projet avec $_GET pour aller sur le projet cliqué ?>
 
 
-<div class="contenairPrincipal">
-
   <h1>Mes projets</h1>
-<div class="listeTechno">
-<h2 class="ftsz_1"> filtrer par :</h2>
-<a href="#">Tous les projets</a>
 
-<?php
-$query = $bdd->query("select * from technologie");
-$result_technos = $query -> fetchAll();
-foreach($result_technos as $key => $techno) {
-  $url_techno = "projet_par_techno.php?lien_techno=" . $techno["nom_techno"];
-  echo " | <a href='$url_techno'>" . $techno["nom_techno"] . "</a>";
-}
- ?>
- </div>
+<!-- LA LISTE POUR FILTRER PAR  TECHNO  -->
+      <div class="listeTechno">
+        <h2 class="ftsz_1"> filtrer par :</h2>
+        <a href="#">Tous les projets</a>
 
+          <?php
+          $query = $bdd->query("select * from technologie");
+          $result_technos = $query -> fetchAll();
+          foreach($result_technos as $key => $techno) {
+            $url_techno = "projet_par_techno.php?lien_techno=" . $techno["nom_techno"];
+            echo " | <a href='$url_techno'>" . $techno["nom_techno"] . "</a>";
+          }
+           ?>
+      </div>
+
+
+<!-- AFFICHAGE DE TOUS LES PROJETS  -->
 <div class="contenair_projets">
   <?php
   //je veux afficher tous mes projets avec
@@ -29,7 +31,6 @@ foreach($result_technos as $key => $techno) {
   // un titre_nom
   // la technologie
   // dans l'ordre que je veux.
-
 
   $reponse = $bdd->query("select * from projet order by ordre");
   // envoie-moi tout sous forme de tableau, dans une variable
@@ -50,8 +51,7 @@ foreach($result_technos as $key => $techno) {
   $result_techno = $jointure -> fetchAll();
 
               foreach($result_techno  as $key => $techno) {
-                echo "<br>";
-                echo $techno["nom_techno"];
+                echo "<h3>" . $techno["nom_techno"] . "</h3>" ;
               }
               echo "</a></div>";
     }
