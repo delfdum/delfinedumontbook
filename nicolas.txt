@@ -1,1 +1,20 @@
-je comprends pas la fonction image avec les if.
+Bonjour Nicolas,
+( bon ne fais pas trop attention à la mise en page du site, je n'ai pas eu le temps nécessaire pour faire ce que je voulais, je continuerai à bosser dessus)
+
+Le fonctionnement:
+1/ il faut créer une base de données "monbook_delf"
+2/ importer les données qui sont dans le dossier
+sql
+3/ dans le fichier "config.php" :
+  Pour le mot de passe de la bdd:
+  -  sur mac ( $motdepasse = 'root';)
+  - pc ($motdepasse = '';)
+  et le chemin en fonction où on range ce dossier.
+
+
+Pour accéder à l'espace administrateur:
+1/ url : http://localhost:8888/delfinedumontbook/admin/connexion.php
+( pour pc: http://localhost:delfinedumontbook/admin/connexion.php)
+2/
+  identifiant : admin_1
+   mot de passe : toto_1
