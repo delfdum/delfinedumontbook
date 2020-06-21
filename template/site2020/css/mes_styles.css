@@ -153,86 +153,52 @@ header nav li:hover:before {
 }
 
 
-/* PAGE TOUS LES PROJETS */
-.tousProjets {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/* PAGE AVEC TOUS LES PROJETS et PAGE PROJET PAR TECHNOLOGIES  */
+
+/* la liste des techno dans tous les projets */
+.listeTechno {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	justify-content: space-around;
+	width: 65%;
+	padding-left: 13vw;
+	padding-bottom: 6vh;
 }
 
+/**/
 .contenair_projets {
   display: flex;
-  flex-direction: column;
-  min-height: 63vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+	min-height: 63vh;
   padding: 1rem;
-}
-.contenair_projets {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 	padding-left: 9vw;
-
-/* IMAGES DANS LES MENUS */
-.demoImage {
-width: 98%;
-object-fit: contain;
 }
-
-  /* PAGE PROJET PAR TECHNOLOGIES */
-
-
-
-
-}
-.contenair_projets hr {
-  border: 1px solid rgb(220, 220, 220);
-}
-
-.contenair_projets h5 {
-  color: rgb(80, 80, 80);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.1rem;
-  margin-top: 0.1rem;
-}
-
-
+/* à l'intérieur de mes capsules */
 .tousProjets {
-  border: 3px solid #1A535C;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	border: 3px solid #1A535C;
   border-radius: 0.5rem;
   margin: 0rem 0.5rem 0.5rem 0rem;
   max-width: 17vw;
   padding: 1%;
 }
-
-.tousProjets p {
-  font-size: 1rem;
+.tousProjets h3 {
+	font-size: 0.8em;
 }
-.tousProjets a {
-  font-size: 1.3rem;
-}
-.contenair_projetSeul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+/* l'image dans chaque projet */
+.demoImage {
+	width: 98%;
+	object-fit: contain;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 }
 
-.chaqueProjet {
-  border: 3px solid gold;
-  border-radius: 0.5rem;
-  margin: 0rem 0.5rem 0.5rem 0rem;
-  max-width: 17vw;
-  padding: 1%;
-}
 
-.chaqueProjet p {
-  font-size: 1rem;
-}
-
-.chaqueProjet a {
-  font-size: 1.3rem;
-}
 
 /* IMAGES PAGE PAR PROJET */
 
@@ -281,15 +247,7 @@ object-fit: contain;
 }
 
 
-/* la liste des techno dans tous les projets */
-.listeTechno {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-	justify-content: space-around;
-	width: 65%;
-	padding-left: 13vw;
-}
+
 
 
 /* FOOTER */
