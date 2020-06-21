@@ -164,19 +164,27 @@ button, label, select, optgroup, img.displayblock {
 
 
 /* FOOTER */
-footer {
+.contenairFooter {
   display: flex;
   justify-content: space-around;
-  background-color: #068FCC;
-  margin-top: 10vh;
-  padding-top: 3vh;
-  padding-bottom: 10vh;
+  background-color: #83c5be;
+  margin-top: 0vh;
+  padding-top: 4vh;
+  padding-bottom: 5vh;
 }
 
 .delfDate {
   display: flex;
   flex-direction: column;
 }
+
+.logo {
+	width: 2vh;
+}
+.logo, img {
+    width: 18%;
+}
+/* ----------------------------- */
 
 .titre_nom{
 	display:flex;

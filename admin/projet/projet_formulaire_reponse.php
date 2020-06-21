@@ -36,7 +36,7 @@ if(!empty($_POST)) { //si $_POST n'est pas vide
       ]);
     }
 
-    $_SESSION["success"][] = "Nous avons ajouté un nouveau projet comme identifiant $projetID";
+    $_SESSION["success"][] = "Nous avons ajouté un nouveau projet: $_POST[titre_projet]";
     header("location: ../accueil.php");
     exit;
 
@@ -62,14 +62,14 @@ if(!empty($_POST)) { //si $_POST n'est pas vide
       $projetID = $_POST["id_projet"];
 //INSERER LES TECHNOS
 //1_je vide la table de jointure où se trouve le projet_id
-$queryerase = $bdd -> prepare ("DELETE FROM projet_techno
+      $queryerase = $bdd -> prepare ("DELETE FROM projet_techno
                                       WHERE projet_id = :projet_id ");
-$queryerase -> execute([":projet_id" => $projetID ]);
-var_dump($queryerase);
+      $queryerase -> execute([":projet_id" => $projetID ]);
+
 //2- je la remplis
-        foreach ( $_POST["technologie"] as $value => $key) {
-             $query3 = $bdd -> prepare ("INSERT INTO projet_techno ( projet_id, techno_id) VALUES ( :projet_id, :techno_id)");
-             $query3 -> execute([
+      foreach ( $_POST["technologie"] as $value => $key) {
+          $query3 = $bdd -> prepare ("INSERT INTO projet_techno ( projet_id, techno_id) VALUES ( :projet_id, :techno_id)");
+          $query3 -> execute([
               ":projet_id" => $projetID,
               ":techno_id" => $key,
             ]);
@@ -82,54 +82,25 @@ var_dump($queryerase);
 
 // IMAGESSSSSSSSSSSSSSSSSSSSS
 
-// if(!empty($_FILES)) {
-//
-//     enregistrerImageProjet($_FILES["imageProjet"], "projet_1");
-// }
 
 if(!empty($_FILES["imageProjet"]["name"][0]) && $_FILES["imageProjet"]["error"][0] == 0) {
-  $mon_dossier_destination = "image/projet";
+      $mon_dossier_destination = "image/projet";
 
-$chemin_dossier_destination = CV_PATH_SITE . "/" . $mon_dossier_destination;
+      $chemin_dossier_destination = CV_PATH_SITE . "/" . $mon_dossier_destination;
 
-
-$chemin_fichier_destination =   $chemin_dossier_destination . "/" . $_POST["titre_projet"] . "1.jpg";
+      $chemin_fichier_destination =   $chemin_dossier_destination . "/" . $_POST["titre_projet"] . "1.jpg";
 //
-  move_uploaded_file($_FILES ["imageProjet"]["tmp_name"][0], $chemin_fichier_destination);
+      move_uploaded_file($_FILES ["imageProjet"]["tmp_name"][0], $chemin_fichier_destination);
 }
 
 if(!empty($_FILES["imageProjet"]["name"][1]) && $_FILES["imageProjet"]["error"][1] == 0) {
-  $mon_dossier_destination = "image/projet";
+      $mon_dossier_destination = "image/projet";
 
-$chemin_dossier_destination = CV_PATH_SITE . "/" . $mon_dossier_destination;
+      $chemin_dossier_destination = CV_PATH_SITE . "/" . $mon_dossier_destination;
 
-
-$chemin_fichier_destination =   $chemin_dossier_destination . "/" . $_POST["titre_projet"] . "2.jpg";
+      $chemin_fichier_destination =   $chemin_dossier_destination . "/" . $_POST["titre_projet"] . "2.jpg";
 //
-  move_uploaded_file($_FILES ["imageProjet"]["tmp_name"][1], $chemin_fichier_destination);
+      move_uploaded_file($_FILES ["imageProjet"]["tmp_name"][1], $chemin_fichier_destination);
 }
 
 changeDePage(CV_URL_SITE . "admin/projet/projet_lister.php");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
