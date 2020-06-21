@@ -63,8 +63,9 @@ body {
   width: 80%;
   background-color: #83c5be;
   margin-left: 10%;
-  border-radius: 10px;
+  border-radius: 25px;
   margin-top: -3vh;
+	margin-bottom: 2vh;
 }
 
 header nav ul {
@@ -145,11 +146,7 @@ h1 {
 	padding-top: 8vh;
 }
 
-h2 {
-  text-align:center;
-  font-size: 1.2em;
-  padding-bottom: 20vh;
-}
+
 
 p {
   font-size: 1.4em;
@@ -163,34 +160,20 @@ button, label, select, optgroup, img.displayblock {
 }
 
 
-/* FOOTER */
-.contenairFooter {
-  display: flex;
-  justify-content: space-around;
-  background-color: #83c5be;
-  margin-top: 0vh;
-  padding-top: 4vh;
-  padding-bottom: 5vh;
-}
 
-.delfDate {
-  display: flex;
-  flex-direction: column;
-}
 
-.logo {
-	width: 2vh;
-}
-.logo, img {
-    width: 18%;
-}
-/* ----------------------------- */
-
-.titre_nom{
+.titre_nom {
 	display:flex;
 	flex-direction: column;
+	margin-top: 5vh;
 }
 
+.titre_nom h2 {
+	text-align:center;
+	font-size: 1.2em;
+	margin-top: -6vh;
+	padding-bottom: 12vh;
+}
 
 
 .contenair_projets {
@@ -372,3 +355,27 @@ button, label, select, optgroup, img.displayblock {
     opacity: 1;
   }
 }
+
+
+/* FOOTER */
+.contenairFooter {
+  display: flex;
+  justify-content: space-around;
+  background-color: #83c5be;
+  margin-top: 0vh;
+  padding-top: 4vh;
+  padding-bottom: 5vh;
+}
+
+.delfDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+	width: 2vh;
+}
+.logo, img {
+    width: 18%;
+}
+/* ----------------------------- */
