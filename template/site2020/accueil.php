@@ -6,9 +6,10 @@
 
           <h1><?php echo  MontrerContenu("TITRE_ACCUEIL")?></h1>
 
+          <?php echo html_image("image/accueil/accueil.jpg", "imageAccueil")?>
+
           <p><?php echo nl2br( MontrerContenu("TEXTE_ACCUEIL"))?></p>
 
-          <?php echo html_image("image/accueil/accueil.jpg", "imageParProjet")?>
 
 </div>
 
