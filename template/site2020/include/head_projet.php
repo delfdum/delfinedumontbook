@@ -14,13 +14,13 @@
     <header>
       <div class="contenair">
         <div class="titre_nom">
-          <h1><?php echo NOM_DU_TITLE ?></h1>
+          <h1><?php echo NOM_DU_TITLE ; ?></h1>
           <h2>webmaster</h2>
         </div>
         <div class="navigation">
           <?php include "navigation.php" ?>
         </div>
       </div>
-      <div class="border"></div> 
+      <div class="border"></div>
     </header>
     <main>

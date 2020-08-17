@@ -26,10 +26,12 @@ if (empty($result_techno)) { //si requete vide, je reviens sur ma page avec tous
 
         foreach ($result_techno as $key => $projetParTechno) {
           //je cree url
-          $url_lienProjet = "template/site2020/projet_par_page.php?projetChoisi==" . $projetParTechno["id_projet"];
+
+
+          $url_lienProjet = "projet.php?projetChoisi=" . $projetParTechno["id_projet"];
 
           echo "<div class='tousProjets'>";
-          echo "<a href='  $url_lienProjet'>" . $projetParTechno["titre_projet"] . "</a>";
+          echo "<a href='$url_lienProjet'>" . $projetParTechno['titre_projet'] .  "</a>";
           echo html_image("image/projet/" .  $projetParTechno["titre_projet"] . "1.jpg","demoImage" );
              echo $projetParTechno["texte"] . "<br>";
              echo $projetParTechno["annee_realisation"];

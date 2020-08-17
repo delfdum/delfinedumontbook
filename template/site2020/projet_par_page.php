@@ -2,7 +2,7 @@
 
 
 <?php
-include "include/head_projet.php"; ?>
+include "include/head.php"; ?>
 
 
 <div class="containerPrincipal">

@@ -22,6 +22,6 @@
           <?php include "navigation.php" ?>
         </div>
       </div>
-      <div class="border"></div>    
+      <div class="border"></div>
     </header>
     <main>
