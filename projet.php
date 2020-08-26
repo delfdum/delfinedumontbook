@@ -19,8 +19,6 @@ function unProjet ($idProjet) {
 //  echo "<pre>";
 //exit;
 
-
-
  function lesTechnos ($idTechno) {
 
      global $bdd;

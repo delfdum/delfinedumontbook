@@ -8,7 +8,7 @@ if(empty($_SESSION["connected_user"])){
 }
 
 if(!empty($_POST)) {
-  if($_POST["id_user"] == "pas_de_id") {
+  if(empty($_POST["id_user"]) ||$_POST["id_user"] == "pas_de_id") {
 
     $query = $bdd -> prepare ("INSERT INTO user (nom, identifiant, motdepasse) VALUES (:nom, :identifiant , :motdepasse)");
         $query -> execute([
@@ -18,13 +18,9 @@ if(!empty($_POST)) {
         ]);
 
         $userID = $bdd -> lastInsertId();
-
-
-
-
-$_SESSION["success"][] = "Nous avons ajouté le nouvel utilisateur $_POST[nom]";
-header("location: ../accueil.php");
-exit;
+        $_SESSION["success"][] = "Nous avons ajouté le nouvel utilisateur $_POST[nom]";
+        header("location: ../accueil.php");
+        exit;
 
 } else {
       // un id est envoyé alors je modifie un enregistrement.

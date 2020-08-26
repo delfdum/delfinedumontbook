@@ -26,11 +26,6 @@ include PATH_TEMPLATE . "include/head.php";
 <!-- AFFICHAGE DE TOUS LES PROJETS  -->
 <div class="contenair_projets">
   <?php
-  //je veux afficher tous mes projets avec
-  // des images
-  // un titre_nom
-  // la technologie
-  // dans l'ordre que je veux.
 
   $reponse = $bdd->query("select * from projet order by ordre");
   // envoie-moi tout sous forme de tableau, dans une variable
